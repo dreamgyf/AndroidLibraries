@@ -1,0 +1,23 @@
+com.dreamgyf.android.ui.widget.shape
+attr cornerBottomLeftRadius
+attr cornerBottomRightRadius
+attr cornerRadius
+attr cornerTopLeftRadius
+attr cornerTopRightRadius
+attr gradientAngle
+attr gradientCenterColor
+attr gradientCenterX
+attr gradientCenterY
+attr gradientEndColor
+attr gradientRadius
+attr gradientStartColor
+attr gradientType
+attr solid
+attr strokeColor
+attr strokeDashGap
+attr strokeDashWidth
+attr strokeWidth
+id linear
+id radial
+id sweep
+styleable ShapeLayout cornerBottomLeftRadius cornerBottomRightRadius cornerRadius cornerTopLeftRadius cornerTopRightRadius gradientAngle gradientCenterColor gradientCenterX gradientCenterY gradientEndColor gradientRadius gradientStartColor gradientType solid strokeColor strokeDashGap strokeDashWidth strokeWidth

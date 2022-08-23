@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapeLayout">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="cornerTopLeftRadius" format="dimension" />
+        <attr name="cornerTopRightRadius" format="dimension" />
+        <attr name="cornerBottomRightRadius" format="dimension" />
+        <attr name="cornerBottomLeftRadius" format="dimension" />
+
+        <attr name="gradientStartColor" format="color" />
+        <attr name="gradientCenterColor" format="color" />
+        <attr name="gradientEndColor" format="color" />
+        <attr name="gradientAngle" format="integer" />
+        <attr name="gradientType" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+        <attr name="gradientCenterX" format="float|fraction" />
+        <attr name="gradientCenterY" format="float|fraction" />
+        <attr name="gradientRadius" format="dimension" />
+
+        <attr name="solid" format="color" />
+
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeDashWidth" format="dimension" />
+        <attr name="strokeDashGap" format="dimension" />
+    </declare-styleable>
+</resources>
