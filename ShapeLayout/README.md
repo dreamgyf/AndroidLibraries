@@ -4,7 +4,7 @@
 
 使用这个布局可以使用属性替代shape背景，避免重复创建大量相似但又细微不同的shape xml
 
-![Demo](https://raw.githubusercontent.com/dreamgyf/ShapeLayout/master/ShapeLayout.png)
+![Demo](./ShapeLayout.png)
 
 ### 属性
 
