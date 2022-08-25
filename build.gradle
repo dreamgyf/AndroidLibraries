@@ -168,4 +168,7 @@ try {
     if (mis != null) {
         mis.close()
     }
+    if (lis != null) {
+        lis.close()
+    }
 }
