@@ -15,6 +15,7 @@ class PublishModule {
     String version
     String description
     String url
+    boolean includeDependencies = false
 }
 
 def mavenFileName = "maven.properties"
@@ -135,6 +136,18 @@ try {
                                         developerConnection = "scm:git:ssh://${gitRepoUrl}.git"
                                         url = "https://${gitRepoUrl}/tree/master"
                                         println "gitRepoUrl: https://${gitRepoUrl}"
+                                    }
+                                    if (publishModule.includeDependencies) {
+                                        withXml {
+                                            def dependenciesNode = asNode().appendNode('dependencies')
+
+                                            project.configurations.implementation.allDependencies.each {
+                                                def dependencyNode = dependenciesNode.appendNode('dependency')
+                                                dependencyNode.appendNode('groupId', it.group)
+                                                dependencyNode.appendNode('artifactId', it.name)
+                                                dependencyNode.appendNode('version', it.version)
+                                            }
+                                        }
                                     }
                                 }
                             }
