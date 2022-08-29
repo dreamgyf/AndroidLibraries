@@ -29,7 +29,7 @@ class DefaultSwipeLoadingRefreshView(private val context: Context) : SwipeLoadin
             refreshImageView.pivotY = 10.dp2pxF(context)
             refreshImageView.id = IV_REFRESH_ID
             _ivRefresh = refreshImageView
-            setPadding(0, 10.dp2px(context), 0, 10.dp2px(context))
+            setPadding(0, 20.dp2px(context), 0, 10.dp2px(context))
         }
     }
 
