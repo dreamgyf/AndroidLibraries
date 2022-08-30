@@ -3,6 +3,14 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+publishModule {
+    groupId 'com.dreamgyf.android.utils'
+    moduleName 'Utils'
+    version '0.1'
+    description 'Android相关工具类'
+    url 'https://github.com/dreamgyf/AndroidLibraries/tree/master/Utils'
+}
+
 android {
     compileSdk 32
 
