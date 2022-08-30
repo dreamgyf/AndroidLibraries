@@ -36,7 +36,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.0'
     implementation 'com.google.android.material:material:1.6.1'
 
-    implementation project(":SwipeLoadingLayout:SwipeLoadingLayout")
+    implementation 'com.dreamgyf.android.ui.widget:SwipeLoadingLayout:1.1'
     implementation project(":SpaceItemDecoration:SpaceItemDecoration")
-    implementation project(":Utils:Utils")
 }

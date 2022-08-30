@@ -15,7 +15,6 @@ class PublishModule {
     String version
     String description
     String url
-    boolean includeDependencies = false
 }
 
 def mavenFileName = "maven.properties"
@@ -137,11 +136,12 @@ try {
                                         url = "https://${gitRepoUrl}/tree/master"
                                         println "gitRepoUrl: https://${gitRepoUrl}"
                                     }
-                                    if (publishModule.includeDependencies) {
+                                    def api = project.configurations.api.allDependencies
+                                    if (!api.isEmpty()) {
                                         withXml {
                                             def dependenciesNode = asNode().appendNode('dependencies')
 
-                                            project.configurations.implementation.allDependencies.each {
+                                            api.each {
                                                 def dependencyNode = dependenciesNode.appendNode('dependency')
                                                 dependencyNode.appendNode('groupId', it.group)
                                                 dependencyNode.appendNode('artifactId', it.name)
