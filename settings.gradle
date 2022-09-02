@@ -26,3 +26,6 @@ include ':SpaceItemDecoration:Sample'
 
 include ':SwipeLoadingLayout:SwipeLoadingLayout'
 include ':SwipeLoadingLayout:Sample'
+
+include ':FlexViewPager:FlexViewPager'
+include ':FlexViewPager:Sample'
