@@ -29,3 +29,6 @@ include ':SwipeLoadingLayout:Sample'
 
 include ':FlexViewPager:FlexViewPager'
 include ':FlexViewPager:Sample'
+
+include ':MarqueeTextView:MarqueeTextView'
+include ':MarqueeTextView:Sample'
