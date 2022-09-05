@@ -1,0 +1,3 @@
+[submodule "FlexViewPager"]
+	path = FlexViewPager
+	url = git@github.com:dreamgyf/FlexViewPager.git
