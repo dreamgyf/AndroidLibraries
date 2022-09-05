@@ -13,3 +13,6 @@
 [submodule "SwipeLoadingLayout"]
 	path = SwipeLoadingLayout
 	url = https://github.com/dreamgyf/SwipeLoadingLayout.git
+[submodule "Utils"]
+	path = Utils
+	url = https://github.com/dreamgyf/AndroidUtils.git
