@@ -10,3 +10,6 @@
 [submodule "SpaceItemDecoration"]
 	path = SpaceItemDecoration
 	url = https://github.com/dreamgyf/SpaceItemDecoration.git
+[submodule "SwipeLoadingLayout"]
+	path = SwipeLoadingLayout
+	url = https://github.com/dreamgyf/SwipeLoadingLayout.git
