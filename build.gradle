@@ -5,8 +5,11 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
 }
 
-task clean(type: Delete, group: 'clean') {
-    delete rootProject.buildDir
+task cleanAllProjects(type: Delete, group: 'projects') {
+    allprojects.forEach {
+        println "clean $it.displayName"
+        delete it.buildDir
+    }
 }
 
 class PublishModule {
@@ -59,7 +62,6 @@ try {
         def sonatypePassword = localProp.getProperty('sonatype.password')
 
         subprojects {
-            println "Set maven publish for $displayName"
             extensions.create("publishModule", PublishModule)
             apply plugin: 'maven-publish'
             apply plugin: 'signing'
