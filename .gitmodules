@@ -1,3 +1,6 @@
 [submodule "FlexViewPager"]
 	path = FlexViewPager
 	url = https://github.com/dreamgyf/FlexViewPager.git
+[submodule "MarqueeTextView"]
+	path = MarqueeTextView
+	url = https://github.com/dreamgyf/MarqueeTextView.git
