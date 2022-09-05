@@ -33,23 +33,12 @@ public class FlexViewPager extends ViewPager {
 		init();
 	}
 
-	final public void setAdapter(@Nullable FlexPagerAdapter adapter) {
-		super.setAdapter(adapter);
-	}
-
 	@Override
 	final public void setAdapter(@Nullable PagerAdapter adapter) {
-		if (adapter != null && !(adapter instanceof FlexPagerAdapter)) {
-			throw new IllegalArgumentException("FlexViewPager need to use FlexPagerAdapter");
+		if (adapter != null && !(adapter instanceof FlexPager)) {
+			throw new IllegalArgumentException("PagerAdapter need to implement FlexPager.");
 		}
 		super.setAdapter(adapter);
-	}
-
-	@Nullable
-	@Override
-	final public FlexPagerAdapter getAdapter() {
-		PagerAdapter adapter = super.getAdapter();
-		return adapter instanceof FlexPagerAdapter ? (FlexPagerAdapter) adapter : null;
 	}
 
 	private void init() {
@@ -102,12 +91,17 @@ public class FlexViewPager extends ViewPager {
 	}
 
 	private View getView(int position) {
-		View view = null;
-		FlexPagerAdapter adapter = getAdapter();
-		if (adapter != null && position >= 0 && position < adapter.getCount()) {
-			view = adapter.getView(position);
+		PagerAdapter adapter = getAdapter();
+		if (!(adapter instanceof FlexPager)) {
+			return null;
 		}
-		return view;
+		FlexPager flexPager = (FlexPager) adapter;
+
+		if (position >= 0 && position < adapter.getCount()) {
+			return flexPager.getView(position);
+		}
+
+		return null;
 	}
 
 	private int getViewHeight(View view, int widthMeasureSpec) {

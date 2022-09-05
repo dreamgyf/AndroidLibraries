@@ -6,7 +6,7 @@ plugins {
 publishModule {
     groupId 'com.dreamgyf.android.ui.widget'
     moduleName 'FlexViewPager'
-    version '1.0'
+    version '2.0'
     description '一个可以自适应子视图高度变化的ViewPager'
     url 'https://github.com/dreamgyf/AndroidLibraries/tree/master/FlexViewPager'
 }

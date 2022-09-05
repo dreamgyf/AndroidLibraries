@@ -3,6 +3,10 @@
 **TextView with horizontal scrolling (Scrolls regardless of whether the content is more than one line)**\
 **走马灯式横向滚动的TextView（无论内容是否超过一行都会滚动）**
 
+```groovy
+implementation 'com.dreamgyf.android.ui.widget:MarqueeTextView:1.0'
+```
+
 ![Demo](./MarqueeTextView.gif)
 
 ## Get Started 快速使用
