@@ -4,3 +4,6 @@
 [submodule "MarqueeTextView"]
 	path = MarqueeTextView
 	url = https://github.com/dreamgyf/MarqueeTextView.git
+[submodule "ShapeLayout"]
+	path = ShapeLayout
+	url = https://github.com/dreamgyf/ShapeLayout.git

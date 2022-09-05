@@ -1,7 +1,7 @@
 # AndroidLibraries
 Android库合集，包括UI库、工具库、插件库等
 
-## [ShapeLayout](./ShapeLayout)
+## [ShapeLayout](https://github.com/dreamgyf/ShapeLayout)
 
 一种可以使用属性替代shape背景的布局，从此告别写shape xml
 
