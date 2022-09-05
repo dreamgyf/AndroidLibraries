@@ -7,3 +7,6 @@
 [submodule "ShapeLayout"]
 	path = ShapeLayout
 	url = https://github.com/dreamgyf/ShapeLayout.git
+[submodule "SpaceItemDecoration"]
+	path = SpaceItemDecoration
+	url = https://github.com/dreamgyf/SpaceItemDecoration.git

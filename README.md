@@ -19,6 +19,6 @@ Android库合集，包括UI库、工具库、插件库等
 
 走马灯式横向滚动的TextView（无论内容是否超过一行都会滚动）
 
-## [SpaceItemDecoration](./SpaceItemDecoration)
+## [SpaceItemDecoration](https://github.com/dreamgyf/SpaceItemDecoration)
 
 RecyclerView内部Items等分间距装饰类
