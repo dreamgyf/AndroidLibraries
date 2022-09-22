@@ -16,19 +16,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AndroidLibraries"
 
-include ':Utils:Utils'
-
-include ':ShapeLayout:ShapeLayout'
-include ':ShapeLayout:Sample'
-
-include ':SpaceItemDecoration:SpaceItemDecoration'
-include ':SpaceItemDecoration:Sample'
-
-include ':SwipeLoadingLayout:SwipeLoadingLayout'
-include ':SwipeLoadingLayout:Sample'
-
-include ':FlexViewPager:FlexViewPager'
-include ':FlexViewPager:Sample'
-
-include ':MarqueeTextView:MarqueeTextView'
-include ':MarqueeTextView:Sample'
+includeBuild 'Utils'
+includeBuild 'ShapeLayout'
+includeBuild 'SpaceItemDecoration'
+includeBuild 'SwipeLoadingLayout'
+includeBuild 'FlexViewPager'
+includeBuild 'MarqueeTextView'
