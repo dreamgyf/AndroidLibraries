@@ -1,5 +1,10 @@
 # AndroidLibraries
+
 Android库合集，包括UI库、工具库、插件库等
+
+**注：这是一个大仓工程，如果需要自己编译，请直接`clone`本仓库，同步`git submodules`**
+
+**同步完成后，各个子仓是可以单独打开，独立编译的**
 
 ## [ShapeLayout](https://github.com/dreamgyf/ShapeLayout)
 

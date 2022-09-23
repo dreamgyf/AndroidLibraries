@@ -1,6 +1,16 @@
 [libraries]
 android-material = { module = "com.google.android.material:material", version = "1.6.1" }
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.5.1" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.8.0" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version = "1.2.1" }
+
+dreamgyf-Utils = { module = "com.dreamgyf.android.utils:Utils", version = "0.1" }
+dreamgyf-FlexViewPager = { module = "com.dreamgyf.android.ui.widget:FlexViewPager", version = "2.0" }
+dreamgyf-MarqueeTextView = { module = "com.dreamgyf.android.ui.widget:MarqueeTextView", version = "1.0" }
+dreamgyf-ShapeLayout = { module = "com.dreamgyf.android.ui.widget:ShapeLayout", version = "1.1" }
+dreamgyf-SpaceItemDecoration = { module = "com.dreamgyf.android.ui:SpaceItemDecoration", version = "1.0" }
+dreamgyf-SwipeLoadingLayout = { module = "com.dreamgyf.android.ui.widget:SwipeLoadingLayout", version = "1.1" }
 
 [plugins]
 android-app = { id = "com.android.application", version = "7.2.1" }

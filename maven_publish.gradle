@@ -52,11 +52,11 @@ try {
         extensions.create("publishModule", PublishModule)
 
         afterEvaluate {
-            apply plugin: 'maven-publish'
-            apply plugin: 'signing'
-
             if (publishModule.moduleName != null) {
                 println "Module $name has configuration that can publish to maven."
+
+                apply plugin: 'maven-publish'
+                apply plugin: 'signing'
 
                 ext."signing.keyId" = signingId
                 ext."signing.password" = signingPassword

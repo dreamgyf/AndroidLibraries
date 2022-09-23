@@ -13,6 +13,11 @@ dependencyResolutionManagement {
         mavenCentral()
         mavenLocal()
     }
+    versionCatalogs {
+        libs {
+            from(files("./libs.toml"))
+        }
+    }
 }
 rootProject.name = "AndroidLibraries"
 

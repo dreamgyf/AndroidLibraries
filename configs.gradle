@@ -1,6 +1,8 @@
 def configs = [
         android: [
-                compileSdk: 32
+                compileSdk: 32,
+                targetSdk: 32,
+                minSdk: 21
         ]
 ]
 
