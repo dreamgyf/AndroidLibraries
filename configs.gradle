@@ -1,0 +1,9 @@
+def configs = [
+        android: [
+                compileSdk: 32
+        ]
+]
+
+allprojects {
+    it.ext.configs = configs
+}

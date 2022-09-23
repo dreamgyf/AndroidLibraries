@@ -1,0 +1,8 @@
+[libraries]
+android-material = { module = "com.google.android.material:material", version = "1.6.1" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.5.1" }
+
+[plugins]
+android-app = { id = "com.android.application", version = "7.2.1" }
+android-lib = { id = "com.android.library", version = "7.2.1" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.6.10" }
