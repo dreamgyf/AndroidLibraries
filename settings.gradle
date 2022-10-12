@@ -23,6 +23,7 @@ rootProject.name = "AndroidLibraries"
 
 includeBuild 'Utils'
 includeBuild 'ShapeLayout'
+includeBuild 'BlurLayout'
 includeBuild 'SpaceItemDecoration'
 includeBuild 'SwipeLoadingLayout'
 includeBuild 'FlexViewPager'

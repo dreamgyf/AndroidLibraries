@@ -16,3 +16,6 @@
 [submodule "Utils"]
 	path = Utils
 	url = https://github.com/dreamgyf/AndroidUtils.git
+[submodule "BlurLayout"]
+	path = BlurLayout
+	url = https://github.com/dreamgyf/BlurLayout.git
