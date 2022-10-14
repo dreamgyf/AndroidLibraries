@@ -4,16 +4,15 @@ opt=$1
 smc='--recurse-submodules'
 
 if [[ $opt == 'status' ]]; then
-    git submodule $*
+    git submodule "$*"
 elif [[ $opt == 'pull' ]]; then
-    command="git $*"
-    if [[ !($* =~ $smc) ]]; then
-        command="$command $smc"
+    if ! [[ $* =~ $smc ]]; then
+        git submodule foreach 'git '$*''
     fi
-    $command
+    git $*
 elif [[ $opt == 'push' ]]; then
     command="git $*"
-    if [[ !($* =~ $smc) ]]; then
+    if ! [[ $* =~ $smc ]]; then
         command="$command $smc=on-demand"
     fi
     $command
