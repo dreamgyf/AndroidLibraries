@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 opt=$1
 smc='--recurse-submodules'
@@ -18,5 +18,5 @@ elif [[ $opt == 'push' ]]; then
     fi
     $command
 else
-    git submodule foreach 'git $*'
+    git submodule foreach 'git '$*''
 fi
