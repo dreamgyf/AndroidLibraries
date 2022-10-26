@@ -1,6 +1,15 @@
 def rootProjectDir = rootDir.parent
 
 class PublishModule {
+    Library library
+
+    void library(Action<Library> action) {
+        library = new Library()
+        action.execute(library)
+    }
+}
+
+class Library {
     String groupId
     String moduleName
     String version
@@ -52,7 +61,7 @@ try {
         extensions.create("publishModule", PublishModule)
 
         afterEvaluate {
-            if (publishModule.moduleName != null) {
+            if (publishModule.library != null) {
                 println "Module $name has configuration that can publish to maven."
 
                 apply plugin: 'maven-publish'
@@ -82,33 +91,30 @@ try {
                     }
                     publications {
                         release(MavenPublication) {
-                            groupId = publishModule.groupId
-                            artifactId = publishModule.moduleName
-                            version = publishModule.version
+                            groupId = publishModule.library.groupId
+                            artifactId = publishModule.library.moduleName
+                            version = publishModule.library.version
 
                             def artifactOutputPath = "$buildDir/outputs/aar/${project.getName()}-release.aar"
                             artifact(artifactOutputPath)
                             artifact androidSourcesJar
 
-                            println "groupId: $groupId"
-                            println "artifactId: $artifactId"
-                            println "version: $version"
-                            println "artifactOutputPath: $artifactOutputPath"
+                            println "groupId: $publishModule.library.groupId"
+                            println "artifactId: $publishModule.library.moduleName"
+                            println "version: $publishModule.library.version"
 
                             pom {
-                                name = publishModule.moduleName
-                                description = publishModule.description
-                                url = publishModule.url
+                                name = publishModule.library.moduleName
+                                description = publishModule.library.description
+                                url = publishModule.library.url
 
-                                println "description: $publishModule.description"
-                                println "url: $publishModule.url"
+                                println "description: $publishModule.library.description"
+                                println "url: $publishModule.library.url"
 
                                 licenses {
                                     license {
                                         name = licenseName
                                         url = licenseUrl
-                                        println "license: $licenseName"
-                                        println "licenseUrl: $licenseUrl"
                                     }
                                 }
                                 developers {
@@ -124,7 +130,6 @@ try {
                                     connection = "scm:git:${gitRepoUrl}.git"
                                     developerConnection = "scm:git:ssh://${gitRepoUrl}.git"
                                     url = "https://${gitRepoUrl}/tree/master"
-                                    println "gitRepoUrl: https://${gitRepoUrl}"
                                 }
                                 def api = project.configurations.api.allDependencies
                                 if (!api.isEmpty()) {
