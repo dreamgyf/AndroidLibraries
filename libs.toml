@@ -4,6 +4,8 @@ androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.5.1
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.8.0" }
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version = "1.2.1" }
+android-gradle-tools = { module = "com.android.tools.build:gradle", version = "7.3.0" }
+kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.12.0" }
 
 dreamgyf-Utils = { module = "com.dreamgyf.android.utils:Utils", version = "0.3" }
 dreamgyf-FlexViewPager = { module = "com.dreamgyf.android.ui.widget:FlexViewPager", version = "2.0" }
@@ -12,8 +14,12 @@ dreamgyf-ShapeLayout = { module = "com.dreamgyf.android.ui.widget:ShapeLayout", 
 dreamgyf-BlurLayout = { module = "com.dreamgyf.android.ui.widget:BlurLayout", version = "1.1" }
 dreamgyf-SpaceItemDecoration = { module = "com.dreamgyf.android.ui:SpaceItemDecoration", version = "1.0" }
 dreamgyf-SwipeLoadingLayout = { module = "com.dreamgyf.android.ui.widget:SwipeLoadingLayout", version = "1.1" }
+dreamgyf-FastInflate = { module = "com.dreamgyf.android.plugin:FastInflate", version = "0.1.0-alpha-01" }
 
 [plugins]
-android-app = { id = "com.android.application", version = "7.2.1" }
-android-lib = { id = "com.android.library", version = "7.2.1" }
+android-app = { id = "com.android.application", version = "7.3.0" }
+android-lib = { id = "com.android.library", version = "7.3.0" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.6.10" }
+gradle-publish = { id = "com.gradle.plugin-publish", version = "1.0.0" }
+
+dreamgyf-fastinflate = { id = "com.dreamgyf.android.fastinflate", version = "0.1.0-alpha-01" }

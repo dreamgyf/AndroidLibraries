@@ -19,3 +19,6 @@
 [submodule "BlurLayout"]
 	path = BlurLayout
 	url = https://github.com/dreamgyf/BlurLayout.git
+[submodule "FastInflate"]
+	path = FastInflate
+	url = https://github.com/dreamgyf/FastInflate.git

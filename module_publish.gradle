@@ -2,10 +2,16 @@ def rootProjectDir = rootDir.parent
 
 class PublishModule {
     Library library
+    Plugin plugin
 
     void library(Action<Library> action) {
         library = new Library()
         action.execute(library)
+    }
+
+    void plugin(Action<Plugin> action) {
+        plugin = new Plugin()
+        action.execute(plugin)
     }
 }
 
@@ -15,6 +21,18 @@ class Library {
     String version
     String description
     String url
+}
+
+class Plugin {
+    String group
+    String id
+    String name
+    String displayName
+    String version
+    String implementationClass
+    String description
+    String url
+    Collection<String> tags
 }
 
 def mavenFileName = "maven.properties"
@@ -122,8 +140,6 @@ try {
                                         id = developerName
                                         name = developerName
                                         email = developerEmail
-                                        println "developerName: $developerName"
-                                        println "developerEmail: $developerEmail"
                                     }
                                 }
                                 scm {
@@ -152,6 +168,42 @@ try {
                 signing {
                     sign publishing.publications
                 }
+            }
+
+            if (publishModule.plugin != null) {
+                println "Module $name has configuration that can publish to gradle plugins."
+
+                apply plugin: 'java-gradle-plugin'
+                apply plugin: 'com.gradle.plugin-publish'
+
+                group = publishModule.plugin.group
+                version = publishModule.plugin.version
+
+                pluginBundle {
+                    website = publishModule.plugin.url
+                    vcsUrl = "${publishModule.plugin.url}.git"
+                    tags = publishModule.plugin.tags
+                }
+
+                gradlePlugin {
+                    plugins {
+                        create(publishModule.plugin.name) {
+                            id = publishModule.plugin.id
+                            displayName = publishModule.plugin.displayName
+                            description = publishModule.plugin.description
+                            implementationClass = publishModule.plugin.implementationClass
+                        }
+                    }
+                }
+
+                println "group: ${publishModule.plugin.group}"
+                println "id: ${publishModule.plugin.id}"
+                println "name: ${publishModule.plugin.name}"
+                println "displayName: ${publishModule.plugin.displayName}"
+                println "version: ${publishModule.plugin.version}"
+                println "description: ${publishModule.plugin.description}"
+                println "url: ${publishModule.plugin.url}"
+                println "tags: ${publishModule.plugin.tags}"
             }
         }
     }
