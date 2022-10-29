@@ -16,6 +16,8 @@ elif [[ $opt == 'push' ]]; then
         command="$command $smc=on-demand"
     fi
     $command
+elif [[ $opt == 'sync' ]]; then
+    git pull $smc
 else
     git submodule foreach 'git '$*''
 fi
