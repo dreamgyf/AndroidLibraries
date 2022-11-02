@@ -14,7 +14,7 @@ dreamgyf-ShapeLayout = { module = "com.dreamgyf.android.ui.widget:ShapeLayout", 
 dreamgyf-BlurLayout = { module = "com.dreamgyf.android.ui.widget:BlurLayout", version = "1.1" }
 dreamgyf-SpaceItemDecoration = { module = "com.dreamgyf.android.ui:SpaceItemDecoration", version = "1.0" }
 dreamgyf-SwipeLoadingLayout = { module = "com.dreamgyf.android.ui.widget:SwipeLoadingLayout", version = "1.1" }
-dreamgyf-FastInflate = { module = "com.dreamgyf.android.plugin:FastInflate", version = "0.1.0-alpha-02" }
+dreamgyf-FastInflate = { module = "com.dreamgyf.android.plugin:FastInflate", version = "0.1.0-alpha-03" }
 
 [plugins]
 android-app = { id = "com.android.application", version = "7.3.0" }
@@ -22,4 +22,4 @@ android-lib = { id = "com.android.library", version = "7.3.0" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.6.10" }
 gradle-publish = { id = "com.gradle.plugin-publish", version = "1.0.0" }
 
-dreamgyf-fastinflate = { id = "com.dreamgyf.android.fastinflate", version = "0.1.0-alpha-02" }
+dreamgyf-fastinflate = { id = "com.dreamgyf.android.fastinflate", version = "0.1.0-alpha-03" }
