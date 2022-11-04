@@ -35,6 +35,8 @@ class Plugin {
     Collection<String> tags
 }
 
+extensions.create("publishModule", PublishModule)
+
 def mavenFileName = "maven.properties"
 def localFileName = "local.properties"
 
@@ -75,8 +77,6 @@ try {
         def signingPath = localProp.getProperty('signing.path')
         def sonatypeUsername = localProp.getProperty('sonatype.username')
         def sonatypePassword = localProp.getProperty('sonatype.password')
-
-        extensions.create("publishModule", PublishModule)
 
         afterEvaluate {
             if (publishModule.library != null) {
