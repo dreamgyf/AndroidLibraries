@@ -81,6 +81,8 @@ try {
         def sonatypePassword
 
         if (isCI) {
+            println "Is in CI environment."
+
             signingId = System.getenv('SIGNING_KEY_ID')
             signingPassword = System.getenv('SIGNING_PASSWORD')
             signingPath = System.getenv('SIGNING_PATH')
